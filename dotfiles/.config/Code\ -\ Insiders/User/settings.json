@@ -1,0 +1,127 @@
+    // SSH接続時に毎回インストールする拡張機能一覧
+    "remote.SSH.defaultExtensions": [
+        "GitHub.copilot-chat",
+        "GitHub.copilot-labs",
+        "GitHub.copilot-nightly",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "christian-kohler.path-intellisense",
+        "usernamehw.errorlens",
+        "vscode-icons-team.vscode-icons",
+        "streetsidesoftware.code-spell-checker",
+        "njpwerner.autodocstring",
+        "mechatroner.rainbow-csv",
+        "GrapeCity.gc-excelviewer",
+        "oderwat.indent-rainbow",
+        "MS-CEINTL.vscode-language-pack-ja",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "shd101wyy.markdown-preview-enhanced",
+        "wayou.vscode-todo-highlight",
+    ],
+    //docker container接続時に毎回インストールする拡張機能一覧
+    "dev.containers.defaultExtensions": [
+        "GitHub.copilot-chat",
+        "GitHub.copilot-labs",
+        "GitHub.copilot-nightly",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "christian-kohler.path-intellisense",
+        "usernamehw.errorlens",
+        "vscode-icons-team.vscode-icons",
+        "streetsidesoftware.code-spell-checker",
+        "njpwerner.autodocstring",
+        "mechatroner.rainbow-csv",
+        "GrapeCity.gc-excelviewer",
+        "oderwat.indent-rainbow",
+        "MS-CEINTL.vscode-language-pack-ja",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "shd101wyy.markdown-preview-enhanced",
+        "wayou.vscode-todo-highlight",
+    ],
+    //docker container接続時に毎回インストールする拡張機能一覧
+    "dev.WSL.defaultExtensions": [
+        "GitHub.copilot-chat",
+        "GitHub.copilot-labs",
+        "GitHub.copilot-nightly",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "christian-kohler.path-intellisense",
+        "usernamehw.errorlens",
+        "vscode-icons-team.vscode-icons",
+        "streetsidesoftware.code-spell-checker",
+        "njpwerner.autodocstring",
+        "mechatroner.rainbow-csv",
+        "GrapeCity.gc-excelviewer",
+        "oderwat.indent-rainbow",
+        "MS-CEINTL.vscode-language-pack-ja",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "shd101wyy.markdown-preview-enhanced",
+        "wayou.vscode-todo-highlight",
+    ],
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
+    "[python]": {
+        // タブサイズは 4
+        "editor.tabSize": 4,
+        // ファイル保存時にフォーマット
+        "editor.formatOnSave": true
+    },
+    // tests ディレクトリから src ディレクトリのモジュールをインポートするときの vscode 上でモジュールが見つからないエラー防止
+    "python.analysis.extraPaths": [
+        "./src"
+    ],
+    // .venv 内の python を使用
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    // フォーマッターは black を使用
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "${workspaceFolder}/.venv/bin/black",
+    "python.sortImports.path": "${workspaceFolder}/.venv/bin/isort",
+    // リンターに flake8 と mypy を使用
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--ignore=E203, W503",
+        "--max-complexity=10"
+    ],
+    "python.linting.flake8Path": "${workspaceFolder}/.venv/bin/flake8",
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": "${workspaceFolder}/.venv/bin/mypy",
+    // docstring は nympy スタイル (ここは完全好みです)
+    "autoDocstring.docstringFormat": "numpy",
+    // ミニマップを非表示にする
+    "editor.minimap.enabled": false,
+    // 制御文字を表示する(https://qiita.com/rana_kualu/items/3b03961deb003a8a2f1d)
+    "editor.renderControlCharacters": true,
+    // サジェスト一覧の初期表示項目設定
+    "editor.suggestSelection": "first",
+    // ファイルのパンくずリストを表示する
+    "breadcrumbs.enabled": true,
+    // ファイルの末尾を改行で終わらせる
+    "files.insertFinalNewline": true,
+    // 選択行の行番号をハイライトする
+    "editor.renderLineHighlight": "all",
+    // カーソルが滑らかに点滅するように
+    "editor.cursorBlinking": "smooth",
+    // カーソルの点滅をアニメーション表示する
+    "editor.cursorSmoothCaretAnimation": true,
+    // カーソルの外観をブロックに変更
+    "editor.cursorStyle": "block",
+    // ファイルの自動エンコードを実施
+    "files.autoGuessEncoding": true,
+    // 画面全体の表示サイズはデフォルト
+    "window.zoomLevel": 0,
+    // 括弧の対応を色付ける
+    "editor.bracketPairColorization.enabled": true,
+    // 変更監視を除外するパターン定義(https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc)
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/dataset/**/*.{png,zip,jpg,npz,txt}": true,
+        "**/datasets/**/*.{png,zip,jpg,npz,txt}": true,
+        "**/data/**/*.{png,zip,jpg,npz,txt}": true,
+        "**/.venv/**": true
+    },
